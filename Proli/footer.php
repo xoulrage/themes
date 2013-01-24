@@ -38,6 +38,12 @@
 	</div><!-- #wrapper -->
 </div>
 
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquerypp.custom.js"></script><!-- thumbnail slider -->
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.elastislide.js"></script><!-- thumbnail slider -->
+<script type="text/javascript">					
+	$( '#carousel' ).elastislide();					
+</script>
+
 <?php
 	/* Always have wp_footer() just before the closing </body>
 	 * tag of your theme, or you will break many plugins, which

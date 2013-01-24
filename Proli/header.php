@@ -16,36 +16,52 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_directory'); ?>/css/reset.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_url' ); ?>" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_directory'); ?>/css/fonts.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_directory'); ?>/css/organic_tab.css" />
-	<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.8.1.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_directory'); ?>/css/jquery.mCustomScrollbar.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_directory'); ?>/css/elastislide.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_directory'); ?>/js/fancybox/jquery.fancybox.css" />
 	
-	<?php 
+	<?php	
 	global $wp_query;
 	$page = $wp_query->query_vars["pagename"];
 	
 	if ($page == "construction")
 	{ ?>
-		<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_directory'); ?>/js/fancybox/jquery.fancybox.css" />
-		<script src="<?php bloginfo('template_directory'); ?>/js/jquery.mousewheel.min.js" type="text/javascript"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/jquery.easing.min.js" type="text/javascript"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/organictabs.jquery.js" type="text/javascript"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/fancybox/jquery.fancybox.js" type="text/javascript"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/fancybox/loadfancybox.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_directory'); ?>/css/organic_tab.css" />
 	<?php } ?>
 	
+	<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.8.1.min.js" type="text/javascript"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/jquery-ui-1.8.23.custom.min.js" type="text/javascript"></script>	
+	<script src="<?php bloginfo('template_directory'); ?>/js/jquery.easing.min.js" type="text/javascript"></script>	
+	<script src="<?php bloginfo('template_directory'); ?>/js/organictabs.jquery.js" type="text/javascript"></script>	
+	<script src="<?php bloginfo('template_directory'); ?>/js/jquery.mCustomScrollbar.js" type="text/javascript"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/jquery.mousewheel.min.js" type="text/javascript"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/modernizr.custom.17475.js" type="text/javascript"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/fancybox/jquery.fancybox.js" type="text/javascript"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/fancybox/loadfancybox.js" type="text/javascript"></script>
+	
 	<script type="text/javascript">
-		$(window).load(function() {	      
-			style = 'easeOutQuart';		 
+		$(window).load(function(){
+			$("#dev-article").mCustomScrollbar({
+				scrollButtons:{
+				enable:true
+				}
+			});
+		});
+	</script>
+	
+	<script type="text/javascript">
+		$(window).load(function() {
+			style = 'easeOutQuart';
 			$('.list-wrap a').hover(
 				function() {
 					$(this).children('div:first').stop(false,true).animate({bottom:0},{duration:200, easing: style});
-				},		 
+				},
 				function() {
 					$(this).children('div:first').stop(false,true).animate({bottom:-126},{duration:200, easing: style});
 				}
-			);	 	        
+			);
 			$("#example-one").organicTabs();
-		});	    	
+		});
 	</script>
 </head>
 
@@ -61,16 +77,42 @@ function page_bodyID() {  // add id to <body> tag
 	   
 	   $page = (($page == "about-us") || ($page == "vision")) ? "about-page" : $page;
 	   $page = ($page == "construction") ? "construction-page" : $page;
-	   $page = ($page == "devcomplete") ? "dev-completed-page" : $page;
-	   $page = ($page == "devlatest") ? "dev-latest-page" : $page;
-	   $page = ($page == "devupcoming") ? "dev-upcoming-page" : $page;
-	   $page = ($page == "hospitality") ? "hospitality-page" : $page;
+	   $page = ($page == "development") ? "dev-completed-page" : $page;
+	   $page = ($page == "latest") ? "dev-latest-page" : $page;
+	   $page = ($page == "upcoming") ? "dev-upcoming-page" : $page;
+	   $page = (($page == "hospitality") || ($page == "swan-garden-jb") || ($page == "swan-garden-melaka")) ? "hospitality-page" : $page;
 	   $page = ($page == "careers") ? "career-page" : $page;
 	   $page = ($page == "contact-us") ? "contact-page" : $page;
 	}
 	
 	if ($page)
 		echo 'id= "'. $page. '"';
+}
+
+function titleimage()
+{
+	$image;
+	global $wp_query;
+	$page = $wp_query->query_vars["pagename"];
+
+	if ($page == "about-us")
+	{
+		$image = "about_title";
+	}
+	elseif ($page == "vision")
+	{
+		$image = "vision_title";
+	}
+	elseif ($page == "careers")
+	{
+		$image = "career_title";
+	}
+	elseif ($page == "contact-us")
+	{
+		$image = "contact_title";
+	}	
+	
+	echo get_template_directory_uri() . '/images/' . $image . '.png';
 }
 
 ?>
@@ -87,17 +129,17 @@ function page_bodyID() {  // add id to <body> tag
 			<ul>
 				<li><a href="#">corporate profile</a>
 					<ul class="special">
-						<li><a href="<?php bloginfo('url'); ?>/about-us/">about proli</a></li>
-						<li><a href="<?php bloginfo('url'); ?>/vision/">vision & mission</a></li>
-						<li><a href="<?php bloginfo('url'); ?>/about-us/">corporate structure</a></li>
+						<li><a href="<?php bloginfo('url'); ?>/profile/about-us/">about proli</a></li>
+						<li><a href="<?php bloginfo('url'); ?>/profile/vision/">vision & mission</a></li>
+						<li><a href="<?php bloginfo('url'); ?>/profile/about-us/">corporate structure</a></li>
 					</ul>
 				</li>
 				<li><a href="<?php bloginfo('url'); ?>/construction/">construction</a></li>
-				<li><a href="<?php bloginfo('url'); ?>/devcomplete/">development</a>
+				<li><a href="<?php bloginfo('url'); ?>/development/">development</a>
 					<ul class="special" id="dev-drop-menu">
-						<li><a href="<?php bloginfo('url'); ?>/devcomplete/">completed project</a></li>
-						<li><a href="<?php bloginfo('url'); ?>/devlatest/">latest project</a></li>
-						<li><a href="<?php bloginfo('url'); ?>/devupcoming/">upcoming project</a></li>
+						<li><a href="<?php bloginfo('url'); ?>/development/">completed project</a></li>
+						<li><a href="<?php bloginfo('url'); ?>/development/latest/">latest project</a></li>
+						<li><a href="<?php bloginfo('url'); ?>/development/upcoming/">upcoming project</a></li>
 					</ul>
 				</li>
 				<li><a href="<?php bloginfo('url'); ?>/hospitality/">hospitality</a></li>

@@ -2,7 +2,7 @@
 
 /*
 
-Template Name: Careers
+Template Name: Profile
 
 */
 
@@ -14,8 +14,8 @@ Template Name: Careers
 
 <div class="cont" align="right">
 	<h1><img src="<?php titleimage(); ?>"></h1>
-	<br /><br />
-	<div class="text-wrap2">
+	<div class="blank-box"></div>
+	<div class="text-wrap" style="width: 712.5px;">
 
 	  <!-- Content -->
 
@@ -26,6 +26,8 @@ Template Name: Careers
 
 			<?php endwhile; endif; ?> 
 	  </div>
+
+	  <div class="reset"></div>
 
 	  <!-- End - Content -->
 	</div>
