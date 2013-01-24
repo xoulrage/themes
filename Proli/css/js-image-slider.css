@@ -1,0 +1,144 @@
+/* http://www.menucool.com */
+
+/*slider frame*/
+#sliderFrame {position:relative;background-color:#f2f9fe;}      
+        
+
+#slider 
+{
+    width:460px;height:220px;/* Make it the same size as your images */
+	background:transparent url(../images/try/loading.gif) no-repeat 50% 50%;
+	position:relative;
+    text-align:right;
+    -webkit-box-shadow: 2px 3px 2px 1px rgba(0, 0, 0, 0.5); box-shadow: 2px 3px 2px 1px rgba(0, 0, 0, 0.5)
+}
+#slider span {
+	position:absolute;
+	border:none;
+	visibility:hidden;
+    display: block;
+    text-align:right;
+}
+#slider span img {
+    text-align:right;
+}
+
+/* the link style (if slide image is wrapped in a link) */
+#slider a.imgLink {
+	z-index:2;
+	display:none;position:absolute;
+	top:0px;left:0px;border:0;padding:0;margin:0;
+	width:100%;height:100%;
+}
+
+/* Caption styles */
+div.mc-caption-bg, div.mc-caption-bg2 {
+	position:absolute;
+	width:275px;
+	height:100%;
+	left:0px; /* or left: ??px; */
+	bottom:0px;/* or top: ??px; */
+	z-index:3;
+	overflow:hidden;
+}
+div.mc-caption-bg {
+	background-color:transparent; /*Caption background color. Can be set to "background:transparent;", or set to semi-transparent through the sliderOptions.captionOpacity setting in the javascript.*/
+	border-radius: 5px;
+}
+div.mc-caption {
+	font: 11px/30px Helvetica, Arial, Sans-serif, Tahoma;
+	color:#000000;
+	z-index:4;
+	padding: 20px ;
+	text-align:left;
+}
+div.mc-caption p { font-size: 12px; line-height: 20px; }
+div.mc-caption a { 
+    font-size: 100%; font-weight: bold;
+    line-height: 200%;
+	color:black;
+}
+
+
+
+
+/* ----------- thumbnails ----------- */
+#thumbs 
+{
+    background:white url(../images/try/thumbs-bar.gif) repeat-x 0 0; 
+    border:1px solid white; text-align:center; 
+    font-size:0px;
+    line-height:45px;/*Setting the expected height to line-height fixes many IE8 erratic behaviours*/
+}
+#thumbs .thumb 
+{
+    width:60px;height:45px;
+    cursor:pointer;
+    text-align:center;
+    border-left:1px solid #FFF; border-right:1px solid #DDD; 
+    
+    display:inline-block;
+    *display:inline;zoom:1; /*IE Hack*/
+}
+#thumbs .thumb-on {background-image: url(../images/try/active-bg.png);}
+#thumbs .thumb img {vertical-align:middle;}
+
+
+
+
+/*----------- navigation buttons on both sides of the slider -----------*/
+.group1-Wrapper 
+{
+    position:absolute;
+    z-index:20;
+    top:120px;
+    width:812px;
+}
+a.group1-Prev, a.group1-Next
+{
+    width:56px;height:137px;
+    display:block; 
+    cursor:pointer;
+    position:absolute;
+    top:0;
+    user-select: none;
+}
+a.group1-Prev{background-position:0 0; left: -56px; background:transparent url(../images/left.png) no-repeat}
+a.group1-Next {background-position:0 -150px;right:50px; background:transparent url(../images/right.png) no-repeat}
+
+
+
+
+/* ----------- navigation buttons in the thumbnails bar ---------- */
+a.group2-Prev, a.group2-Next, a.group2-Play, a.group2-Pause 
+{
+    width:20px; height:20px; 
+    background:transparent url(../images/try/navButtons.gif); 
+    display:inline-block; 
+    *display:inline;zoom:1;/*IE hack*/
+    margin-right:8px;
+    vertical-align:middle;
+    cursor:pointer;
+}
+a.group2-Pause{background-position:0 0;}
+a.group2-Play {background-position:0 -20px;}
+a.group2-Next {background-position:0 -40px;}
+a.group2-Prev {background-position:0 -60px;} 
+
+a.group2-Pause:hover{background-position:20px 0;}
+a.group2-Play:hover {background-position:20px -20px;}
+a.group2-Next:hover {background-position:20px -40px;}
+a.group2-Prev:hover {background-position:20px -60px;} 
+
+
+
+
+/* --------- Others ------- */
+#slider 
+{
+	transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+}
+

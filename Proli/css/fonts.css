@@ -1,0 +1,8 @@
+@font-face {
+	font-family: "Helvetica Neue";
+	src: url("../fonts/helveticaneueltstd-mdcn.eot");
+	src: local("☺"),
+	url("../fonts/helveticaneueltstd-mdcn.woff") format("woff"),
+	url("../fonts/helveticaneueltstd-mdcn.otf") format("opentype"),
+	url("../fonts/helveticaneueltstd-mdcn.svg#filename") format("svg");
+}

@@ -1,0 +1,183 @@
+/*
+Theme Name: Proli
+Theme URI: http://wordpress.org/extend/themes/proli
+Author: blablabla
+Author URI: http://wordpress.org/
+Description: blablabla
+Version: 1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: proli
+*/
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+/* My Class */
+.overflow 											{ overflow: hidden }
+.clear 												{ clear: both }
+.underline 											{ text-decoration: underline }
+.black 												{ color: black }
+.white 												{ color: white }
+.bold												{ font-weight: bold }
+.italic												{ font-style: italic }
+.center 											{ text-align: center }
+.visible 											{ visibility: visible }
+.invisible 											{ visibility: hidden }
+.display,.block										{ display: block }
+.none	 											{ display: none }
+.justify											{ text-align: justify }
+.uppercase 											{ text-transform: uppercase }
+.lowercase 											{ text-transform: lowercase }
+.capitalize											{ text-transform: capitalize }
+.standard-bg 										{ background: #ffffff; /* Old browsers */ background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #dbdbdb 98%); 
+													  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(98%,#dbdbdb)); /* Chrome,Safari4+ */
+													  background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#dbdbdb 98%); /* Chrome10+,Safari5.1+ */
+													  background: -o-radial-gradient(center, ellipse cover,  #ffffff 0%,#dbdbdb 98%); /* Opera 12+ */
+													  background: -ms-radial-gradient(center, ellipse cover,  #ffffff 0%,#dbdbdb 98%); /* IE10+ */
+													  background: radial-gradient(ellipse at center,  #ffffff 0%,#dbdbdb 98%); /* W3C */
+													  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ }												  
+
+/* General Tag */
+html, body												{ font-family: Helvetica, Arial, Sans-serif, Tahoma; background: #282828 }
+h1													{ font-size: 170% }
+h2													{ font-size: 170%; color: #555555 }
+h3													{ font-size: 180% }
+h4													{ font-size: 110% }
+h5													{ font-size: 90% }
+h6													{ font-size: 80% }
+p 													{ font-size: 90%; line-height: 150%; margin: 10px 0; color: #555555; text-align: left }
+a 													{ text-decoration: none }
+small 												{ font-size: 65% }
+#wrapper 											{ width: 1000px; margin: 0 auto; overflow: hidden; position: relative }
+.cont 												{ padding-right: 50px; margin-top: 40px }
+.skyline-bg 										{ width: 100%; height: 128px; background: url(images/city_bg.png) repeat-x; }
+
+/* index */
+.wrap 												{ width: 1000px; margin: 0 auto; position: relative; -webkit-box-shadow:  0px 5px 10px 10px rgba(0, 0, 0, .5);
+													  box-shadow:  0px 5px 10px 10px rgba(0, 0, 0, .5) }
+#index-page #logo 									{ width: 25%; position: absolute; top: 10px; left: 0; z-index: 2 }
+#coverup 											{ width: 116px; height: 295px; position: absolute; top: 0; left: 0; z-index: 1 }
+.caption3-inside 									{ width: 50%; margin-left: 150px; height: 340px }
+.title 												{ position: absolute; top: 40%; left: 1%; z-index: 3 }
+.slide-content-wrapper								{ width: 528px; height: 215px; position: relative; z-index: 10 }
+.slide-left 										{ width: 34px; height: 83px; /*background: url(images/left.png) no-repeat;*/ position: absolute; top: 60px; left: -10px }
+.slide-right 										{ width: 34px; height: 83px; /*background: url(images/right.png) no-repeat;*/ position: absolute; top: 60px; right: -10px }
+.slide-content 										{ width: 460px; height: 215px; margin: 0 auto; overflow: hidden; background: #f2f9fe }
+.slide-content-pic 									{ width: 180px; float: right }
+.slide-content-text 								{ width: 240px; padding: 35px 20px; float: left }
+.slide-content-text h4 								{ font-size: 120%; font-weight: bold; line-height: 120%; margin-bottom: 10px }
+
+#index-footer 										{ background: #5e5d65 url(images/index_footer_top.jpg) repeat-x; position: relative }
+#footer-dock-wrapper 								{ width: 680px; position: absolute; left: 50%; top: -85px; margin-left: -340px; background: url(images/dock_bg.png) bottom no-repeat }
+#footer-dock 										{ width: 499px; margin: 0 auto; min-height: 77px; padding-bottom: 15px }
+#footer-dock a 										{ margin-right: 80px }
+#index-bottomnav 									{ width: 100%; margin: 0 auto; padding-top: 50px; overflow: hidden }
+.nav-col											{ width: 20%; float: left }
+.nav-col a span										{ display: block; font-size: 75%; color: white; text-transform: capitalize; margin: 10px 0 }	
+.nav-col a h4 										{ font-size: 80%; font-weight: bold; text-transform: uppercase; color: white }
+#index-skyline 										{ background: url(images/index_footer_tile.jpg) bottom repeat-x; min-height: 128px; text-align: center }
+#index-copyright 									{ padding-top: 100px; font-size: 70%; color: white }
+
+/* about */
+#about-page #wrapper								{ background: url(images/about_bg.png) top left no-repeat }
+#about-page h2 										{ margin: 10px 0 }
+#logo 												{ width: 185px; float: left }
+#logo img 											{ margin-left: 20px }
+#topnav 											{ width: 770px; float: right; padding-left: 25px; margin-top: 40px; font-family: "Helvetica Neue" }
+#topnav ul li 										{ display: inline-block; position: relative }
+#topnav ul li a 									{ display: block; font-size: 1.1em; padding: 12px 10px; color: #3c3c3c; text-transform: uppercase; text-align: left; 
+													  text-shadow: -1px -1px 1px #999999; filter: dropshadow(color=#999999, offx=-1, offy=-1) }
+#topnav ul li a:hover 								{ -webkit-border-radius: 5px; border-radius: 5px; background: #9d9d9d; color: white; -webkit-box-shadow: inset -2px 2px 2px 1px #666666; 
+													  box-shadow: inset -2px 2px 2px 1px #666666 }
+#topnav ul li:last-child 							{ margin-right: 0 }													  
+#topnav ul li ul 									{ position: absolute; width: 220px; padding-top: 26px; padding-bottom: 17px; top: 40px; left: 9999px; z-index: 9999;
+													  background: url(images/drop_menu_top.png) top no-repeat, url(images/drop_menu_bottom.png) bottom no-repeat }
+#topnav ul li ul li 								{ width: 220px; background: url(images/drop_menu_center.png) top repeat-y }
+#topnav ul li ul li a 								{ width: 180px; padding: 7px 19px; text-align: center; font-size: 1em }
+#topnav ul li ul li a:hover 						{ -webkit-border-radius: 0; border-radius: 0 }
+#topnav ul li:hover ul 								{ left: -30px }
+#topnav ul li ul.special 							{ width: 166px; background: url(images/drop_menu_top2.png) top no-repeat, url(images/drop_menu_bottom2.png) bottom no-repeat; padding-top: 20px; padding-bottom: 12px }
+#topnav ul li ul.special li 						{ width: 166px; background: url(images/drop_menu_center2.png) top repeat-y }
+#topnav ul li ul.special li a 						{ width: 165px; font-size: .9em; padding: 7px 0 }
+#topnav ul li:hover ul.special						{ left: 0 }
+#topnav ul li:hover ul#dev-drop-menu				{ left: -20px }
+
+.blank-box 											{ width: 75%; height: 145px; margin-top: 25px; margin-bottom: 25px; background: white; -webkit-border-radius: 8px; border-radius: 8px; 
+													  -webkit-box-shadow: inset -2px 2px 2px 1px #818181; box-shadow: inset -2px 2px 2px 1px #818181 }
+.text-wrap 											{ width: 775px; overflow: hidden }	
+#footer 											{ width: 100%; overflow: hidden; background: #343338; padding-top: 48px; text-align: center }
+#bottomnav 											{ width: 80%; margin: 0 auto; overflow: hidden }
+.nav-col											{ width: 20%; float: left; margin-right: 5%; text-align: left }
+.nav-col a span										{ display: block; font-size: 75%; color: white; text-transform: capitalize; margin: 10px 0 }	
+.nav-col a h4 										{ font-size: 80%; font-weight: bold; text-transform: uppercase; color: white }											  
+#copyright 											{ margin-top: 70px; font-size: 70%; color: white; margin-left: 25px; margin-bottom: 10px }
+
+/* construction */
+#construction-page #wrapper							{ background: url(images/construction_bg.png) top left no-repeat }
+
+/* development */
+#dev-completed-page #wrapper						{ background: url(images/completed_bg.png) top left no-repeat }
+.text-wrap2 										{ width: 65%; overflow: hidden }
+.cont2 												{ padding-right: 50px; margin-top: 0; overflow: hidden }
+#dev-list 											{ height: 650px; padding: 20px 0; overflow: auto; text-align: left }
+#dev-list h3 										{ font-size: 140%; margin-top: 5px; color: #555555 }
+#dev-list p 											{ font-size: 75% }
+.dev-list-item 										{ overflow: hidden; -webkit-border-radius: 10px; border-radius: 8px; padding: 10px; margin: 20px 0; background: #fefefe; /* Old browsers */ 
+													  background: -moz-linear-gradient(left,  #fefefe 10%, #a6a6a6 100%); /* FF3.6+ */
+													  background: -webkit-gradient(linear, left top, right top, color-stop(10%,#fefefe), color-stop(100%,#a6a6a6)); /* Chrome,Safari4+ */
+													  background: -webkit-linear-gradient(left,  #fefefe 10%,#a6a6a6 100%); /* Chrome10+,Safari5.1+ */
+													  background: -o-linear-gradient(left,  #fefefe 10%,#a6a6a6 100%); /* Opera 11.10+ */
+													  background: -ms-linear-gradient(left,  #fefefe 10%,#a6a6a6 100%); /* IE10+ */
+													  background: linear-gradient(to right,  #fefefe 10%,#a6a6a6 100%); /* W3C */
+													  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#a6a6a6',GradientType=1 ); /* IE6-9 */
+													  -webkit-box-shadow: 2px 3px 2px 1px rgba(0, 0, 0, 0.5); box-shadow: 2px 3px 2px 1px rgba(0, 0, 0, 0.5) }
+.dev-list-pic 										{ width: 166px; float: left }
+.dev-list-desc 										{ width: 350px; padding-left: 20px; float: left }												  
+#dev-article										{ margin-top: 50px; height: 400px; padding: 20px 0; padding-left: 50px; overflow: auto; text-align: left }
+#dev-article h3 									{ font-size: 140%; color: #555555; padding-bottom: 8px; margin-bottom: 40px; border-bottom: 1px solid #6f6f6f; }
+#dev-article p 										{ font-size: 75% }
+#dev-menu-holder									{ width: 350px; float: left; text-align: left }
+#dev-menu 											{ width: 60%; margin: 0 auto }
+#dev-menu a 										{ display: block; font-size: 110%; color: #555555; margin: 10px 0 }
+#dev-menu a:hover 									{ font-weight: bold; text-decoration: underline }
+#dev-thumb-holder									{ width: 600px; float: right; text-align: left; padding-bottom: 10px }
+#dev-thumb-holder h3 								{ font-size: 130%; line-height: 110% }
+#dev-latest-page #wrapper							{ background: url(images/latest_bg.png) top left no-repeat }
+#dev-upcoming-page #wrapper							{ background: url(images/upcoming_bg.png) top left no-repeat }
+#upcoming-form 										{ margin-top: 30px }
+#upcoming-form fieldset 							{ overflow: hidden }
+#upcoming-form label 								{ font-size: 80%; color: #636363; width: 20%; display: block; float: left; padding-top: 14px }
+#upcoming-form .input-outer-wrapper					{ width: 80%; float: left }
+#upcoming-form .input-wrapper						{ background: white; -webkit-border-radius: 5px; border-radius: 5px; padding: 6px 10px; margin: 5px 0; color: white; 
+													  -webkit-box-shadow: inset -1px 1px 2px 1px #999999; box-shadow: inset -1px 1px 2px 1px #999999 }
+#upcoming-form input[type=text]						{ width: 100%; border: 0; padding: 0; background: transparent; font-size: 80%; color: #6a6b6b }					
+#upcoming-form textarea								{ width: 100%; border: 0; padding: 0; background: transparent; font: 100% Helvetica, Arial, Sans-serif, Tahoma; color: #6a6b6b }	
+
+/* hospitality */
+#hospitality-page #wrapper							{ background: url(images/hospitality_bg.png) top left no-repeat }
+#hospitality-page .text-wrap2 						{ width: 65%; overflow: hidden }
+
+/* career */
+#career-page .text-wrap2 							{ width: 75%; overflow: hidden }	
+#career-page #wrapper								{ background: url(images/career_bg.png) top left no-repeat }
+#career-page h2 									{ font-weight: bold; margin: 10px 0; margin-bottom: 20px; text-align: left }
+a.apply 											{ display: block; margin-top: 25px }
+.dotted-line 										{ height: 1px; background: url(images/dotted_line.png) repeat-x; margin-top: 10px; margin-bottom: 20px }
+
+/* contact */
+#contact-page #wrapper								{ background: url(images/contact_bg.png) top left no-repeat }
+#contact-page h2 									{ margin: 10px 0; margin-bottom: 20px; text-align: left }
+#contact-page h4 									{ line-height: 120% }
+.col-left 											{ width: 50%; margin-right: 5%; float: left; text-align: left }
+.col-right 											{ width: 45%; float: left; text-align: left }
+#contact-form fieldset 								{ -webkit-border-radius: 5px; border-radius: 5px; padding: 5px 15px; padding-left: 17px; margin: 15px 0; color: white; 
+													  -webkit-box-shadow: inset -1px 2px 2px 2px #999999; box-shadow: inset -1px 2px 2px 2px #999999 }
+#contact-form fieldset#name 						{ background: #efefef url(images/name_icon.png) 10px 10px no-repeat }
+#contact-form fieldset#email 						{ background: #efefef url(images/mail_icon.png) 10px 15px no-repeat }	
+#contact-form fieldset#msg 							{ background: #efefef url(images/msg_icon.png) 10px 15px no-repeat }													  
+#contact-form input[type=text]						{ width: 100%; border: 0; padding: 5px 0; padding-left: 20px; background: transparent; font-size: 90%; color: #6a6b6b }					
+#contact-form textarea								{ width: 100%; border: 0; padding: 5px 0; padding-left: 20px; background: transparent; font: 90% Helvetica, Arial, Sans-serif, Tahoma; 
+													  color: #6a6b6b; overflow-y: hidden }	
+#contact-page a.apply 								{ text-align: right }													  	  

@@ -1,0 +1,53 @@
+/*
+	 Organic Tabs
+	 by Chris Coyier
+	 http://css-tricks.com
+*/
+
+* { margin: 0; padding: 0; }
+html { overflow-y: scroll; }
+a { text-decoration: none; }
+a:focus { outline: 0; }
+p { margin: 0 0 20px 0; }
+#page-wrap { width: 440px; margin: 80px auto; }
+h1 { margin: 0 0 20px 0; }
+
+/* Generic Utility */
+.hide { position: absolute; top: -9999px; left: -9999px; }
+
+
+/* Specific to example one */
+
+#example-one { margin: 0 }
+
+#example-one .nav { overflow: hidden; margin: 0; padding-top: 10px; padding-left: 3px }
+#example-one .nav li { float: left; margin: 0; margin-right: 10px }
+#example-one .nav li.last { margin-right: 0 }
+#example-one .nav li a { display: block; color: white; font-size: 110%; padding: 6px 20px; -webkit-border-radius: 5px 5px 0 0; border-radius: 5px 5px 0 0; background: #818182; text-align: center;
+ text-transform: uppercase; -webkit-box-shadow:  0px -1px 2px 2px rgba(0, 0, 0, 0.3); box-shadow:  0px -1px 2px 2px rgba(0, 0, 0, 0.3); }
+#example-one .nav li a:hover { color: black; background: #fefefe; /* Old browsers */ background: -moz-linear-gradient(top,  #fefefe 10%, #a6a6a6 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#fefefe), color-stop(100%,#a6a6a6)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fefefe 10%,#a6a6a6 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fefefe 10%,#a6a6a6 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fefefe 10%,#a6a6a6 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fefefe 10%,#a6a6a6 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#a6a6a6',GradientType=0 ); /* IE6-9 */ }
+
+
+#example-one ul li a.current { color: black; background: #fefefe; /* Old browsers */ background: -moz-linear-gradient(top,  #fefefe 10%, #a6a6a6 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#fefefe), color-stop(100%,#a6a6a6)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fefefe 10%,#a6a6a6 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fefefe 10%,#a6a6a6 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fefefe 10%,#a6a6a6 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fefefe 10%,#a6a6a6 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#a6a6a6',GradientType=0 ); /* IE6-9 */ }
+
+#example-one .base	{ margin-top: 50px }
+#example-one .list-wrap	{  }
+#example-one .list-wrap div	{ overflow: hidden }
+#example-one .list-wrap div a 	{ display: block; float: left; margin-right: 15px; margin-bottom: 15px; position: relative; -webkit-box-shadow:  1px 2px 2px 1px rgba(0, 0, 0, 0.3); 
+								  box-shadow:  1px 2px 2px 1px rgba(0, 0, 0, 0.3); overflow: hidden }
+#example-one .list-wrap div a .caption 			{ position: absolute; height: 67px; background: black; text-align: left; opacity: 0.75; filter: alpha(opacity=75); -moz-opacity: 0.75; 
+												  -khtml-opacity: 0.75; bottom: -200px }
+#example-one .list-wrap div a .caption span 	{ font-size: 75%; line-height: 120%; color: white; display: block; padding: 10px; width: 157px; text-transform: uppercase }	
+
