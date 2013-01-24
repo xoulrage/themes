@@ -223,16 +223,6 @@
                 <a class="footer-dock-btn" style="margin-left: 20px; margin-right: 0" href="<?php bloginfo('url'); ?>/contact-us/"><img src="<?php echo get_template_directory_uri(); ?>/images/dock_btn3.png" /></a>
             </div>
         </div>
-        <!--SHTEST-->
-        <div>
-            <?php if (have_posts()) : ?>
-            <?php query_posts( array ( 'category_name' => 'haha', 'posts_per_page' => -1)); //TODO: need to find a way to replace cat id with real category name ?>
-            <?php while (have_posts()) : the_post(); ?>
-                <?php the_title(); ?>   <br/>
-            <?php endwhile; ?>
-            <?php endif; ?>
-        </div>
-        <!--SHTEST-->
         <div id="index-bottomnav">
             <div style="width: 680px; margin: 0 auto">
                 <ul class="nav-col" style="width: 25%; padding-left: 5%">
