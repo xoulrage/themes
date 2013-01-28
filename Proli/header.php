@@ -67,20 +67,26 @@
 
 <?php
 
+
+
 function page_bodyID() {  // add id to <body> tag
 	global $wp_query;
 	$page = '';
 	if (is_front_page() ) {
 		   $page = 'home';
 	/*} elseif (is_page()) {*/
+    } elseif (is_single()){
+        $page = in_category('dev-completed') ? "dev-completed-page" : $page;
+        $page = in_category('dev-latest')? "dev-latest-page" : $page;
+        $page = in_category('dev-upcoming')? "dev-upcoming-page" : $page;
     } else {
 	   $page = $wp_query->query_vars["pagename"];
 	   
 	   $page = (($page == "about-us") || ($page == "vision")) ? "about-page" : $page;
 	   $page = is_category('construction') ? "construction-page" : $page;
-	   $page = is_category('dev-completed') || is_category('dev-completed')? "dev-completed-page" : $page;
-	   $page = is_category('dev-latest') || is_category('dev-latest')? "dev-latest-page" : $page;
-	   $page = is_category('dev-upcoming') || is_category('dev-upcoming')? "dev-upcoming-page" : $page;
+	   $page = is_category('dev-completed')? "dev-completed-page" : $page;
+	   $page = is_category('dev-latest')? "dev-latest-page" : $page;
+	   $page = is_category('dev-upcoming')? "dev-upcoming-page" : $page;
 	   $page = (($page == "hospitality") || ($page == "swan-garden-jb") || ($page == "swan-garden-melaka")) ? "hospitality-page" : $page;
 	   $page = ($page == "careers") ? "career-page" : $page;
 	   $page = ($page == "contact-us") ? "contact-page" : $page;
