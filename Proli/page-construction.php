@@ -27,7 +27,7 @@ Template Name: Construction
 
 						<?php the_content(); ?>
 
-					<?php endwhile; endif; ?>  	 
+					<?php endwhile; endif; ?>
 				</div><!-- END List Wrap -->  
 			</div> 	        
 		</div><!-- END example-one -->
