@@ -232,10 +232,10 @@
                     <li><a href="<?php bloginfo('url'); ?>/about-us/"><span>corporate structure</span></a></li>
                 </ul>
                 <ul class="nav-col" style="width: 20%">
-                    <li><a href="<?php bloginfo('url'); ?>/construction/"><h4>core business</h4></a></li>
-                    <li><a href="<?php bloginfo('url'); ?>/construction/"><span>construction</span></a></li>
-                    <li><a href="<?php bloginfo('url'); ?>/devcomplete/"><span>development</span></a></li>
-                    <li><a href="<?php bloginfo('url'); ?>/hospitality/"><span>hotel</span></a></li>
+                    <li><a href="<?php bloginfo('url'); ?>/category/construction/"><h4>core business</h4></a></li>
+                    <li><a href="<?php bloginfo('url'); ?>/category/construction/"><span>construction</span></a></li>
+                    <li><a href="<?php bloginfo('url'); ?>/category/dev-completed/"><span>development</span></a></li>
+                    <li><a href="<?php bloginfo('url'); ?>/category/hospitality/"><span>hotel</span></a></li>
                 </ul>
                 <ul class="nav-col" style="width: 15%">
                     <li><a href="<?php bloginfo('url'); ?>/career/"><h4>career</h4></a></li>

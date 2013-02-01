@@ -79,6 +79,7 @@ function page_bodyID() {  // add id to <body> tag
         $page = in_category('dev-completed') ? "dev-completed-page" : $page;
         $page = in_category('dev-latest')? "dev-latest-page" : $page;
         $page = in_category('dev-upcoming')? "dev-upcoming-page" : $page;
+        $page = in_category('hospitality')? "hospitality-page" : $page;
     } else {
 	   $page = $wp_query->query_vars["pagename"];
 	   

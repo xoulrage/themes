@@ -6,6 +6,7 @@ if ( function_exists( 'add_theme_support' ) ) {
     add_image_size( 'homepage-thumb', 180 );
     add_image_size( 'construction-thumb', 177 );
     add_image_size( 'development-thumb', 166 );
+    add_image_size( 'slider_thumb', 164, 262 );
     function custom_excerpt_length( $length ) {
         return 20;
     }

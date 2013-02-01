@@ -15,8 +15,10 @@ Template Name: Dev Complete
         <div id="dev-article">
             <h3><?php the_title(); ?></h3>
             <p><?php the_content(); ?></p>
+
         </div>
     </div>
+    <?php endwhile; endif; ?>
     <div id="dev-menu-holder">
         <div id="dev-menu">
             <?php $my_query = new WP_Query( array ( 'category_name' => 'dev-completed', 'posts_per_page' => -1)); ?>
@@ -26,18 +28,24 @@ Template Name: Dev Complete
         </div>
     </div>
     <div id="dev-thumb-holder">
-        <ul id="carousel" class="elastislide-list">
-            <li><a class="fancybox" rel="[gropu1]" href="<?php echo get_template_directory_uri(); ?>/images/project_tn4.jpg"><img src="<?php echo get_template_directory_uri(); ?>/images/project_tn4.jpg" /></a></li>
-            <li><a class="fancybox" rel="[gropu1]" href="<?php echo get_template_directory_uri(); ?>/images/project_tn5.jpg"><img src="<?php echo get_template_directory_uri(); ?>/images/project_tn5.jpg" /></a></li>
-            <li><a class="fancybox" rel="[gropu1]" href="<?php echo get_template_directory_uri(); ?>/images/project_tn6.jpg"><img src="<?php echo get_template_directory_uri(); ?>/images/project_tn6.jpg" /></a></li>
-            <li><a class="fancybox" rel="[gropu1]" href="<?php echo get_template_directory_uri(); ?>/images/project_tn4.jpg"><img src="<?php echo get_template_directory_uri(); ?>/images/project_tn4.jpg" /></a></li>
-            <li><a class="fancybox" rel="[gropu1]" href="<?php echo get_template_directory_uri(); ?>/images/project_tn5.jpg"><img src="<?php echo get_template_directory_uri(); ?>/images/project_tn5.jpg" /></a></li>
-            <li><a class="fancybox" rel="[gropu1]" href="<?php echo get_template_directory_uri(); ?>/images/project_tn6.jpg"><img src="<?php echo get_template_directory_uri(); ?>/images/project_tn6.jpg" /></a></li>
-            <li><a class="fancybox" rel="[gropu1]" href="<?php echo get_template_directory_uri(); ?>/images/project_tn4.jpg"><img src="<?php echo get_template_directory_uri(); ?>/images/project_tn4.jpg" /></a></li>
-            <li><a class="fancybox" rel="[gropu1]" href="<?php echo get_template_directory_uri(); ?>/images/project_tn5.jpg"><img src="<?php echo get_template_directory_uri(); ?>/images/project_tn5.jpg" /></a></li>
-            <li><a class="fancybox" rel="[gropu1]" href="<?php echo get_template_directory_uri(); ?>/images/project_tn6.jpg"><img src="<?php echo get_template_directory_uri(); ?>/images/project_tn6.jpg" /></a></li>
-        </ul>
+        <?php rewind_posts(); ?>
+        <?php if (have_posts()) : while (have_posts()) : the_post();?>
+        <p><?php echo do_shortcode('[wpsgallery]'); ?></p>
+        <?php endwhile; endif; ?>
     </div>
-    <?php endwhile; endif; ?>
+       <!-- <ul id="carousel" class="elastislide-list">
+            <li><a class="fancybox" rel="[gropu1]" href="<?php /*echo get_template_directory_uri(); */?>/images/project_tn4.jpg"><img src="<?php /*echo get_template_directory_uri(); */?>/images/project_tn4.jpg" /></a></li>
+            <li><a class="fancybox" rel="[gropu1]" href="<?php /*echo get_template_directory_uri(); */?>/images/project_tn5.jpg"><img src="<?php /*echo get_template_directory_uri(); */?>/images/project_tn5.jpg" /></a></li>
+            <li><a class="fancybox" rel="[gropu1]" href="<?php /*echo get_template_directory_uri(); */?>/images/project_tn6.jpg"><img src="<?php /*echo get_template_directory_uri(); */?>/images/project_tn6.jpg" /></a></li>
+            <li><a class="fancybox" rel="[gropu1]" href="<?php /*echo get_template_directory_uri(); */?>/images/project_tn4.jpg"><img src="<?php /*echo get_template_directory_uri(); */?>/images/project_tn4.jpg" /></a></li>
+            <li><a class="fancybox" rel="[gropu1]" href="<?php /*echo get_template_directory_uri(); */?>/images/project_tn5.jpg"><img src="<?php /*echo get_template_directory_uri(); */?>/images/project_tn5.jpg" /></a></li>
+            <li><a class="fancybox" rel="[gropu1]" href="<?php /*echo get_template_directory_uri(); */?>/images/project_tn6.jpg"><img src="<?php /*echo get_template_directory_uri(); */?>/images/project_tn6.jpg" /></a></li>
+            <li><a class="fancybox" rel="[gropu1]" href="<?php /*echo get_template_directory_uri(); */?>/images/project_tn4.jpg"><img src="<?php /*echo get_template_directory_uri(); */?>/images/project_tn4.jpg" /></a></li>
+            <li><a class="fancybox" rel="[gropu1]" href="<?php /*echo get_template_directory_uri(); */?>/images/project_tn5.jpg"><img src="<?php /*echo get_template_directory_uri(); */?>/images/project_tn5.jpg" /></a></li>
+            <li><a class="fancybox" rel="[gropu1]" href="<?php /*echo get_template_directory_uri(); */?>/images/project_tn6.jpg"><img src="<?php /*echo get_template_directory_uri(); */?>/images/project_tn6.jpg" /></a></li>
+        </ul>-->
+    </div>
+    <div>
+
 </div>
 <?php get_footer(); ?>
