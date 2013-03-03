@@ -3,12 +3,12 @@ remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support( 'post-thumbnails' );
-    add_image_size( 'homepage-thumb', 180 );
-    add_image_size( 'construction-thumb', 177 );
-    add_image_size( 'development-thumb', 166 );
+    add_image_size( 'homepage-thumb', 180, 215, true );
+    add_image_size( 'construction-thumb', 177, 126, true );
+    add_image_size( 'development-thumb', 166, 137, true );
     add_image_size( 'slider_thumb', 164, 262 );
     function custom_excerpt_length( $length ) {
-        return 20;
+        return 100;
     }
     add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 

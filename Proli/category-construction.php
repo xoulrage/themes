@@ -14,7 +14,7 @@
         <div id="example-one">
             <ul class="nav">
                 <li class="nav-one"><a href="#on-going" class="current">on-going</a></li>
-                <li class="nav-two"><a href="#completed">completed</a></li>
+                <li class="nav-two"><a href="#completed" >completed</a></li>
             </ul>
             <img src="<?php echo get_template_directory_uri(); ?>/images/tab_shadow.jpg" />
             <div class="base">
@@ -27,7 +27,7 @@
                                 $full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');?>
                                 <a class="fancybox" rel="[group1]" href="<?php echo $full_image_url[0]; ?>">
                                     <?php the_post_thumbnail('construction-thumb'); ?>
-                                    <div class="caption"><span><?php the_title(); ?></span></div>
+                                    <div class="caption"><span><?php the_content(); ?></span></div>
                                 </a>
                             <?php endif ?>
                         <?php endwhile; ?>
@@ -41,7 +41,7 @@
                                 $full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');?>
                                 <a class="fancybox" rel="[group2]" href="<?php echo $full_image_url[0]; ?>">
                                     <?php the_post_thumbnail('construction-thumb'); ?>
-                                    <div class="caption"><span><?php the_title(); ?></span></div>
+                                    <div class="caption"><span><?php the_content(); ?></span></div>
                                 </a>
                                 <?php endif ?>
                             <?php endwhile; ?>
@@ -52,5 +52,17 @@
         </div><!-- END example-one -->
     </div>
 </div>
-
+<script type="text/javascript">
+     $(document).ready(function () {
+         if(window.location.hash) {
+             var hash_value = window.location.hash.replace('#', '');
+             if (hash_value == 'completed'){
+                 $(".nav li.nav-one a").removeClass("current");
+                 $(".nav li.nav-two a").addClass("current");
+                 $("#on-going").addClass("hide");
+                 $("#completed").removeClass("hide");
+             }
+         }
+     });
+</script>
 <?php get_footer(); ?>

@@ -94,36 +94,36 @@
 
 <body id="index-page">
 <div class="wrap">
-    <div id="logo"><a href="index.html"><img class="logo" alt="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png" /></a></div>
+    <div id="logo"><a href="<?php bloginfo('url'); ?>"><img class="logo" alt="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png" /></a></div>
     <div id="coverup"><img src="<?php echo get_template_directory_uri(); ?>/images/coverup.png" /></div>
     <div id="outer5">
         <div class="box">
             <img class="slide-bg" src="<?php echo get_template_directory_uri(); ?>/images/slide1.jpg" />
             <div class="caption_3" style="height: 75%; z-index: 4">
                 <div class="caption3-inside">
-
                     <div class="slide-content-wrapper">
-
                         <ul id="slider-1">
                             <?php if (have_posts()) : ?>
-                            <?php query_posts( array ( 'category_name' => 'Construction', 'posts_per_page' => -1)); ?>
+                            <?php query_posts( array ( 'category__and' => array(get_cat_ID( $cat_name='Construction'), get_cat_ID( $cat_name='Feature')), 'posts_per_page' => 5, 'orderby' => 'date', 'order' => 'DESC')); ?>
                             <?php while (have_posts()) : the_post(); ?>
                                 <li>
                                     <div class="slide-left"></div>
-                                    <div class="slide-content">
-                                        <a href="<?php the_permalink() ?>">
-                                            <div class="slide-content-pic">
-                                                <?php if ( has_post_thumbnail()) :
-                                                    the_post_thumbnail('homepage-thumb'); ?>
-                                                <?php else : ?>
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/slide_content_pic.jpg" />
-                                                <?php endif ?>
-                                            </div>
-                                            <div class="slide-content-text">
-                                                <h4><?php the_title(); ?></h4>
-                                                <p><?php the_excerpt();?></p>
-                                            </div>
-                                        </a>
+                                    <?php if (in_category("con-completed")) : ?>
+                                    <div class="slide-content" onclick="location.href='<?php bloginfo('url'); ?>/category/construction/#completed'">
+                                    <?php else : ?>
+                                    <div class="slide-content" onclick="location.href='<?php bloginfo('url'); ?>/category/construction/'">
+                                    <?php endif; ?>
+                                        <div class="slide-content-pic">
+                                            <?php if ( has_post_thumbnail()) :
+                                                the_post_thumbnail('homepage-thumb'); ?>
+                                            <?php else : ?>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/images/slide_content_pic.jpg" />
+                                            <?php endif ?>
+                                        </div>
+                                        <div class="slide-content-text">
+                                            <h4><?php the_title(); ?></h4>
+                                            <p><?php the_excerpt();?></p>
+                                        </div>
                                     </div>
                                     <div class="slide-right"></div>
                                 </li>
@@ -145,24 +145,22 @@
                     <div class="slide-content-wrapper">
                         <ul id="slider-2">
                             <?php if (have_posts()) : ?>
-                            <?php query_posts( array ( 'category_name' => 'Development', 'posts_per_page' => -1)); ?>
+                            <?php query_posts( array ( 'category__and' => array(get_cat_ID( $cat_name='Development'), get_cat_ID( $cat_name='Feature')), 'posts_per_page' => 5, 'orderby' => 'date', 'order' => 'DESC')); ?>
                             <?php while (have_posts()) : the_post(); ?>
                                 <li>
                                     <div class="slide-left"></div>
-                                    <div class="slide-content">
-                                        <a href="<?php the_permalink() ?>">
-                                            <div class="slide-content-pic">
-                                                <?php if ( has_post_thumbnail()) :
-                                                    the_post_thumbnail('homepage-thumb'); ?>
-                                                <?php else : ?>
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/slide_content_pic.jpg" />
-                                                <?php endif ?>
-                                            </div>
-                                            <div class="slide-content-text">
-                                                <h4><?php the_title(); ?></h4>
-                                                <p><?php the_excerpt();?></p>
-                                            </div>
-                                        </a>
+                                    <div class="slide-content" onclick="location.href='<?php the_permalink() ?>'">
+                                        <div class="slide-content-pic">
+                                            <?php if ( has_post_thumbnail()) :
+                                                the_post_thumbnail('homepage-thumb'); ?>
+                                            <?php else : ?>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/images/slide_content_pic.jpg" />
+                                            <?php endif ?>
+                                        </div>
+                                        <div class="slide-content-text">
+                                            <h4><?php the_title(); ?></h4>
+                                            <p><?php the_excerpt();?></p>
+                                        </div>
                                     </div>
                                     <div class="slide-right"></div>
                                 </li>
@@ -183,24 +181,22 @@
 
                         <ul id="slider-3">
                             <?php if (have_posts()) : ?>
-                            <?php query_posts( array ( 'category_name' => 'Hospitality', 'posts_per_page' => -1)); ?>
+                            <?php query_posts( array ( 'category__and' => array(get_cat_ID( $cat_name='Hospitality'), get_cat_ID( $cat_name='Feature')), 'posts_per_page' => 5, 'orderby' => 'date', 'order' => 'DESC')); ?>
                             <?php while (have_posts()) : the_post(); ?>
                                 <li>
                                     <div class="slide-left"></div>
-                                    <div class="slide-content">
-                                        <a href="<?php the_permalink() ?>">
-                                            <div class="slide-content-pic">
-                                                <?php if ( has_post_thumbnail()) :
-                                                    the_post_thumbnail('homepage-thumb'); ?>
-                                                <?php else : ?>
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/images/slide_content_pic.jpg" />
-                                                <?php endif ?>
-                                            </div>
-                                            <div class="slide-content-text">
-                                                <h4><?php the_title(); ?></h4>
-                                                <p><?php the_excerpt();?></p>
-                                            </div>
-                                        </a>
+                                    <div class="slide-content" onclick="location.href='<?php the_permalink() ?>'">
+                                        <div class="slide-content-pic">
+                                            <?php if ( has_post_thumbnail()) :
+                                                the_post_thumbnail('homepage-thumb'); ?>
+                                            <?php else : ?>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/images/slide_content_pic.jpg" />
+                                            <?php endif ?>
+                                        </div>
+                                        <div class="slide-content-text">
+                                            <h4><?php the_title(); ?></h4>
+                                            <p><?php the_excerpt();?></p>
+                                        </div>
                                     </div>
                                     <div class="slide-right"></div>
                                 </li>
@@ -246,9 +242,7 @@
             </div>
         </div>
         <div id="index-skyline"><div id="index-copyright">2012 &copy; Proli. All Rights Reserved.</div></div>
-
     </div>
-
 </div>
 </body>
 </html>
