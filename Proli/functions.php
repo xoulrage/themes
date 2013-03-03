@@ -8,7 +8,7 @@ if ( function_exists( 'add_theme_support' ) ) {
     add_image_size( 'development-thumb', 166, 137, true );
     add_image_size( 'slider_thumb', 164, 262 );
     function custom_excerpt_length( $length ) {
-        return 100;
+        return 50;
     }
     add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
