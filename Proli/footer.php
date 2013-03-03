@@ -14,25 +14,25 @@
 		<div id="footer" role="contentinfo">
 			<div id="bottomnav">
 				<ul class="nav-col">
-					<li><a href="about_proli.html"><h4>corporate profile</h4></a></li>
-					<li><a href="about_proli.html"><span>about proli</span></a></li>
-					<li><a href="about_vision.html"><span>vision & mission</span></a></li>
-					<li><a href="#"><span>corporate structure</span></a></li>
+					<li><a href="<?php bloginfo('url'); ?>/profile/about-us/"><h4>corporate profile</h4></a></li>
+					<li><a href="<?php bloginfo('url'); ?>/profile/about-us/"><span>about proli</span></a></li>
+					<li><a href="<?php bloginfo('url'); ?>/profile/vision/"><span>vision & mission</span></a></li>
+					<li><a href="<?php bloginfo('url'); ?>/profile/about-us/"><span>corporate structure</span></a></li>
 				</ul>
 				<ul class="nav-col">
-					<li><a href="construction.html"><h4>core business</h4></a></li>
-					<li><a href="construction.html"><span>construction</span></a></li>
-					<li><a href="dev_completed.html"><span>development</span></a></li>
-					<li><a href="hospitality.html"><span>hotel</span></a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/construction/"><h4>core business</h4></a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/construction/"><span>construction</span></a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/dev-completed/"><span>development</span></a></li>
+					<li><a href="<?php bloginfo('url'); ?>/hospitality/"><span>hotel</span></a></li>
 				</ul>
 				<ul class="nav-col">
-					<li><a href="career.html"><h4>career</h4></a></li>
+					<li><a href="<?php bloginfo('url'); ?>/category/career/"><h4>career</h4></a></li>
 				</ul>
 				<ul class="nav-col">
-					<li><a href="contact.html"><h4>contact us</h4></a></li>
+					<li><a href="<?php bloginfo('url'); ?>/contact-us/"><h4>contact us</h4></a></li>
 				</ul>
 			</div>
-			<div id="copyright">2012 &copy; Proli. All Rights Reserved.</div>
+			<div id="copyright">2013 &copy; Proli. All Rights Reserved.</div>
 		</div><!-- #footer -->
 
 	</div><!-- #wrapper -->

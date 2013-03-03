@@ -46,6 +46,11 @@
 				enable:true
 				}
 			});
+			$("#dev-list").mCustomScrollbar({
+				scrollButtons:{
+				enable:true
+				}
+			});
 		});
 	</script>
 	
@@ -63,6 +68,21 @@
 			$("#example-one").organicTabs();
 		});
 	</script>
+	
+	<script type="text/javascript">
+		$(window).load(function() {
+			$("#cntctfrm_contact_name").attr('value', "Name")
+									   .attr('onfocus', "if(this.value == 'Name') {this.value = '';}")
+									   .attr('onblur', "if (this.value == '') {this.value = 'Name';}");
+			
+			$("#cntctfrm_contact_email").attr('value', "Email")
+									   .attr('onfocus', "if(this.value == 'Email') {this.value = '';}")
+									   .attr('onblur', "if (this.value == '') {this.value = 'Email';}");
+									   
+			$("#cntctfrm_contact_message").attr('onfocus', "if(this.value == this.defaultValue) {this.value = '';}")
+									   .attr('onblur', "if (this.value == '') {this.value = this.defaultValue;}");
+		});
+	</script>		
 </head>
 
 <?php
@@ -80,6 +100,7 @@ function page_bodyID() {  // add id to <body> tag
         $page = in_category('dev-latest')? "dev-latest-page" : $page;
         $page = in_category('dev-upcoming')? "dev-upcoming-page" : $page;
         $page = in_category('hospitality')? "hospitality-page" : $page;
+		$page = in_category('career')? "career-page" : $page;
     } else {
 	   $page = $wp_query->query_vars["pagename"];
 	   
@@ -89,7 +110,7 @@ function page_bodyID() {  // add id to <body> tag
 	   $page = is_category('dev-latest')? "dev-latest-page" : $page;
 	   $page = is_category('dev-upcoming')? "dev-upcoming-page" : $page;
 	   $page = (($page == "hospitality") || ($page == "swan-garden-jb") || ($page == "swan-garden-melaka")) ? "hospitality-page" : $page;
-	   $page = ($page == "careers") ? "career-page" : $page;
+	   $page = is_category('career')? "career-page" : $page;
 	   $page = ($page == "contact-us") ? "contact-page" : $page;
 	}
 	
@@ -151,7 +172,7 @@ function titleimage()
 					</ul>
 				</li>
 				<li><a href="<?php bloginfo('url'); ?>/hospitality/">hospitality</a></li>
-				<li><a href="<?php bloginfo('url'); ?>/career/">careers</a></li>
+				<li><a href="<?php bloginfo('url'); ?>/category/career/">careers</a></li>
 				<li><a href="<?php bloginfo('url'); ?>/contact-us/">contact us</a></li>
 			</ul>
 		</div>

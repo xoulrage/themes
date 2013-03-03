@@ -139,7 +139,7 @@ small 												{ font-size: 65% }
 #dev-article h3 									{ font-size: 140%; color: #555555; padding-bottom: 8px; margin-bottom: 40px; border-bottom: 1px solid #6f6f6f; }
 #dev-article p 										{ font-size: 75% }
 #dev-menu-holder									{ width: 350px; float: left; text-align: left }
-#dev-menu 											{ width: 60%; margin: 0 auto }
+#dev-menu 											{ width: 70%; margin: 0 auto }
 #dev-menu a 										{ display: block; font-size: 110%; color: #555555; margin: 10px 0 }
 #dev-menu a:hover 									{ font-weight: bold; text-decoration: underline }
 #dev-thumb-holder									{ width: 600px; float: right; text-align: left; padding-bottom: 10px }
@@ -181,3 +181,18 @@ a.apply 											{ display: block; margin-top: 25px }
 #contact-form textarea								{ width: 100%; border: 0; padding: 5px 0; padding-left: 20px; background: transparent; font: 90% Helvetica, Arial, Sans-serif, Tahoma; 
 													  color: #6a6b6b; overflow-y: hidden }	
 #contact-page a.apply 								{ text-align: right }													  	  
+
+#cntctfrm_contact_form #wrapper								{ background: url(images/contact_bg.png) top left no-repeat }
+#cntctfrm_contact_form h2 									{ margin: 10px 0; margin-bottom: 20px; text-align: left }
+#cntctfrm_contact_form h4 									{ line-height: 120% }
+.col-left 											{ width: 50%; margin-right: 5%; float: left; text-align: left }
+.col-right 											{ width: 45%; float: left; text-align: left }
+#cntctfrm_contact_form fieldset 								{ -webkit-border-radius: 5px; border-radius: 5px; padding: 5px 15px; padding-left: 17px; margin: 15px 0; color: white; 
+													  -webkit-box-shadow: inset -1px 2px 2px 2px #999999; box-shadow: inset -1px 2px 2px 2px #999999 }
+#cntctfrm_contact_form fieldset#name 						{ background: #efefef url(images/name_icon.png) 10px 10px no-repeat }
+#cntctfrm_contact_form fieldset#email 						{ background: #efefef url(images/mail_icon.png) 10px 15px no-repeat }	
+#cntctfrm_contact_form fieldset#msg 							{ background: #efefef url(images/msg_icon.png) 10px 15px no-repeat }													  
+#cntctfrm_contact_form input[type=text]						{ width: 100%; border: 0; padding: 5px 0; padding-left: 20px; background: transparent; font-size: 90%; color: #6a6b6b }					
+#cntctfrm_contact_form textarea								{ width: 100%; border: 0; padding: 5px 0; padding-left: 20px; background: transparent; font: 90% Helvetica, Arial, Sans-serif, Tahoma; 
+													  color: #6a6b6b; overflow-y: hidden }	
+#cntctfrm_contact_form a.apply 								{ text-align: right }	

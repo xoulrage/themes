@@ -8,8 +8,6 @@ Template Name: Contact Us
 
 ?>
 
-
-
 <?php get_header(); ?>
 
 <div class="cont" align="right">
@@ -24,6 +22,7 @@ Template Name: Contact Us
 			<?php endwhile; endif; ?> 
 		</div>
 		<div class="col-right">
+			<!--
 			<form name="contact-form" id="contact-form" action="#" method="post">
 				<fieldset id="name">
 					<input type="text" name="name" value="Name" onfocus="if(this.value == 'Name') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Name';}" />
@@ -36,6 +35,8 @@ Template Name: Contact Us
 				</fieldset>
 				<a class="apply" href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/send_btn.png" /></a>
 			</form>
+			-->
+			<?php echo do_shortcode('[contact_form]'); ?>
 		</div>
 	</div>
 </div>
