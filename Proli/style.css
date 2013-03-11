@@ -124,7 +124,7 @@ small 												{ font-size: 65% }
 #dev-list 											{ height: 650px; padding: 20px 0; overflow: auto; text-align: left }
 #dev-list h3 										{ font-size: 140%; margin-top: 5px; color: #555555 }
 #dev-list p 											{ font-size: 75% }
-.dev-list-item 										{ height:160px; overflow: hidden; -webkit-border-radius: 10px; border-radius: 8px; padding: 10px; margin: 20px 0; background: #fefefe; /* Old browsers */
+.dev-list-item 										{ overflow: hidden; -webkit-border-radius: 10px; border-radius: 8px; padding: 10px; margin: 0px 0px 20px 20px; background: #fefefe; /* Old browsers */
 													  background: -moz-linear-gradient(left,  #fefefe 10%, #a6a6a6 100%); /* FF3.6+ */
 													  background: -webkit-gradient(linear, left top, right top, color-stop(10%,#fefefe), color-stop(100%,#a6a6a6)); /* Chrome,Safari4+ */
 													  background: -webkit-linear-gradient(left,  #fefefe 10%,#a6a6a6 100%); /* Chrome10+,Safari5.1+ */
