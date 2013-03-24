@@ -82,7 +82,7 @@
 			$("#cntctfrm_contact_message").attr('onfocus', "if(this.value == this.defaultValue) {this.value = '';}")
 									   .attr('onblur', "if (this.value == '') {this.value = this.defaultValue;}");
 		});
-	</script>		
+	</script>
 </head>
 
 <?php
@@ -177,3 +177,25 @@ function titleimage()
 			</ul>
 		</div>
 		<br class="clear">
+
+        <?php
+        $page = $wp_query->query_vars["pagename"];
+        $selMenu = '';
+
+        $selMenu = in_category('construction') ? "construction" : $selMenu;
+        $selMenu = in_category('development') ? "development" : $selMenu;
+        $selMenu = in_category('hospitality') ? "hospitality" : $selMenu;
+        $selMenu = in_category('career') ? "career" : $selMenu;
+
+        if ($selMenu == ''){
+            $selMenu = (($page == "about-us") || ($page == "vision")) ? "corporate profile" : $selMenu;
+            $selMenu = ($page == "contact-us") ? "contact us" : $selMenu;
+        }
+        ?>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var selMenu = '<?php echo $selMenu?>';
+                $("#topnav ul li a:contains(" + selMenu + ")").addClass("selected");
+            });
+        </script>

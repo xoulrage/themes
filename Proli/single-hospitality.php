@@ -15,15 +15,21 @@ Template Name: Dev Complete
         <div id="dev-article">
             <h3><?php the_title(); ?></h3>
             <p><?php the_content(); ?></p>
-
         </div>
     </div>
+    <?php $page_id = $post->ID;?>
     <?php endwhile; endif; ?>
     <div id="dev-menu-holder">
         <div id="dev-menu">
             <?php $my_query = new WP_Query( array ( 'category_name' => 'hospitality', 'posts_per_page' => -1)); ?>
             <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
-            <a href="<?php the_permalink() ?>">> <?php the_title(); ?></a>
+            <a href="<?php the_permalink() ?>">> <?php
+                if($post->ID == $page_id)
+                    echo '<b>';
+                the_title();
+                if($post->ID == $page_id)
+                    echo '</b>';
+                ?></a>
             <?php endwhile; ?>
         </div>
     </div>
